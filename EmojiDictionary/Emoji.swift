@@ -20,7 +20,9 @@ struct Emoji {
         self.usage = usage
     }
 }
+
 var emojiTags: [String] = ["Faces", "People", "Animals", "Food", "Activity", "Travel", "Feeling", "Your emojis"]
+
 var facesEmojis: [Emoji] = [Emoji(symbol: "😀", name: "Grinning Face", description: "A typical smiley face.", usage: "happiness"),
                            Emoji(symbol: "😕", name: "Confused Face", description: "A confused, puzzled face.", usage: "unsure what to think; displeasure"),
                            Emoji(symbol: "😍", name: "Heart Eyes", description: "A smiley face with hearts for eyes.", usage: "love of something; attractive")]

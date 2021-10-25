@@ -9,10 +9,8 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         navigationItem.leftBarButtonItem = editButtonItem
@@ -46,16 +44,11 @@ class EmojiTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath) as! EmojiTableViewCell
-        
-        
         let emojiArray = emojis[indexPath.section]
-        
-        
         let emoji = emojiArray[indexPath.row]
         
         cell.update(with: emoji)
         cell.showsReorderControl = true
-        
         return cell
     }
 
@@ -74,7 +67,7 @@ class EmojiTableViewController: UITableViewController {
     @IBAction func unwindToEmojiTableViewController(segue: UIStoryboardSegue){
         guard segue.identifier == "saveUnwind",
               let sourceViewController = segue.source as? AddEditEmojiTableViewController,
-              let emoji = sourceViewController.emoji else {return}
+              let emoji = sourceViewController.emoji else { return }
         
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             emojis[selectedIndexPath.section][selectedIndexPath.row] = emoji

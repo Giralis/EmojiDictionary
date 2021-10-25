@@ -56,6 +56,10 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XV2-V3-mD6" firstAttribute="top" secondItem="H1H-g0-yKq" secondAttribute="top" id="68Y-ag-Wvb"/>
+                                                <constraint firstAttribute="bottom" secondItem="XV2-V3-mD6" secondAttribute="bottom" id="Crz-FM-NqR"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
